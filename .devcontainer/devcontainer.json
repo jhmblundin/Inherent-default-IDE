@@ -1,3 +1,21 @@
+[
+	{
+		"id"?: string,
+		"init"?: boolean,
+		"privileged"?: boolean,
+		"capAdd"?: string[],
+		"securityOpt"?: string[],
+		"entrypoint"?: string,
+		"mounts"?: [],
+		...
+		"customizations"?: {
+			...
+		}
+	},
+	...
+]
+
+
 {
   "image": "mcr.microsoft.com/devcontainers/universal:2",
   "features": {
