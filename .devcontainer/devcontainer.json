@@ -1,8 +1,31 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "name": "inherent_ai_env",
+  "image": "your-dockerhub-username/custom-dev-environment:latest",
+  "forwardPorts": [
+    3000,
+    8888
+  ],
+  "mounts": [
+    "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
+  ],
+  "settings": {
+    "terminal.integrated.shell.linux": "/bin/bash"
+  },
+  "extensions": [
+    "ms-python.python",
+    "ms-toolsai.jupyter",
+    "ritwickdey.liveserver",
+    "dbaeumer.vscode-eslint",
+    "esbenp.prettier-vscode"
+  ],
+  "postCreateCommand": "npm install",
   "features": {
-	  "ghcr.io/devcontainers-contrib/features/live-server:1": {},
-	  "ghcr.io/devcontainers-community/npm-features/prettier:1": {},
-	  "ghcr.io/devcontainers/features/python:1": {}
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "18"
+    },
+    "ghcr.io/devcontainers/features/python:1": {
+      "version": "3"
+    }
   }
 }
+
