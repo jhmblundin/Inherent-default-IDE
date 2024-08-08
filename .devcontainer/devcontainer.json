@@ -1,6 +1,6 @@
 {
-  "name": "inherent_ai_env",
-  "image": "your-dockerhub-username/custom-dev-environment:latest",
+  "name": "inherent-docker-dev-container",
+  "image": "jhmblundin/inherent-ai-image:latest",
   "forwardPorts": [
     3000,
     8888
@@ -28,4 +28,5 @@
     }
   }
 }
+
 
