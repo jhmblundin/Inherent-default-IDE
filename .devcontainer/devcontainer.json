@@ -3,7 +3,8 @@
   "image": "jhmblundin/inherent-ai-image:latest",
   "forwardPorts": [
     3000,
-    8888
+    8888,
+    8080
   ],
   "mounts": [
     "source=${localWorkspaceFolder},target=/workspace,type=bind,consistency=cached"
@@ -14,18 +15,20 @@
   "extensions": [
     "ms-python.python",
     "ms-toolsai.jupyter",
-    "ritwickdey.liveserver",
     "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode"
+    "esbenp.prettier-vscode",
+    "msjsdiag.vscode-react-native",
+    
   ],
-  "postCreateCommand": "npm install",
+  "postCreateCommand": "npm install && pip install -r requirements.txt",
   "features": {
     "ghcr.io/devcontainers/features/node:1": {
-      "version": "18"
+      "version": "22"
     },
     "ghcr.io/devcontainers/features/python:1": {
       "version": "3"
-    }
+    },
+    "ghcr.io/devcontainers-contrib/features/live-server:1": {},
   }
 }
 
