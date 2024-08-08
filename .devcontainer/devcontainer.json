@@ -1,6 +1,6 @@
 {
   "name": "inherent-docker-dev-container",
-  "image": "jhmblundin/inherent-ai-image:latest",
+  "image": "mcr.microsoft.com/vscode/devcontainers/javascript-node:18",
   "forwardPorts": [
     3000,
     8888,
