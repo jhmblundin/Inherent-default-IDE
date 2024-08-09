@@ -7,7 +7,8 @@
     "esModuleInterop": true
   },
   "include": [
-    "src/**/*"
+    "src/**/*",  // Includes all TypeScript files under the src directory.
+    "Javascript_Playground/Typescript_Playground/Learn.ts" // Directly include your specific file.
   ],
   "exclude": [
     "node_modules"
